@@ -1,0 +1,315 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/login/LoginPage.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+
+.LoginPage_login-form-container__TXCZl {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+.LoginPage_login-form-container__TXCZl h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  overflow: hidden; 
+  border-right: 0.15em solid white; 
+  white-space: nowrap; 
+  margin: 20px auto;
+  letter-spacing: 0.15em; 
+  animation: LoginPage_typing__sVQ2n 3.5s steps(40, end), LoginPage_blink-caret__6q03Y 0.75s step-end infinite; 
+}
+
+@keyframes LoginPage_typing__sVQ2n {
+  0% {
+    -webkit-clip-path: inset(
+      0 100% 0 0
+    );
+            clip-path: inset(
+      0 100% 0 0
+    ); 
+  }
+  100% {
+    -webkit-clip-path: inset(0);
+            clip-path: inset(0); 
+  }
+}
+
+@keyframes LoginPage_blink-caret__6q03Y {
+  from,
+  to {
+    border-color: transparent;
+  }
+}
+
+.LoginPage_login-input__O4uow {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+
+
+.LoginPage_password-toggle-icon__6yLEC {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.LoginPage_eye-icon__AX0WN {
+  position: absolute;
+  top: 53%;
+  right: 40px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.LoginPage_eye-icon__AX0WN svg {
+  width: 20px;
+  height: 20px;
+  fill: #ccc;
+  transition: fill 0.3s ease;
+}
+
+.LoginPage_eye-icon__AX0WN svg:hover {
+  fill: #555;
+}
+
+@keyframes LoginPage_eye-blink__1Z93B {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+
+.LoginPage_password-strength-meter__LVoia {
+  width: 100%;
+  height: 2px;
+  margin-top: 10px; 
+  background-color: #eee;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.LoginPage_password-strength-indicator__c2OCp {
+  height: 100%;
+  background-color: #2ecc71; 
+  transition: width 0.3s ease; 
+}
+
+.LoginPage_password-strong__c7ZYm {
+  background-color: #2ecc71; /* Зеленый цвет */
+}
+
+.LoginPage_password-medium__8x7GE {
+  background-color: #f1c40f; 
+}
+
+.LoginPage_password-weak__S3SBx {
+  background-color: #e74c3c; 
+}
+.LoginPage_button-container__QI75I {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.LoginPage_login-button__uaOVN,
+.LoginPage_registration-button__ExwF7 {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0 5px; 
+}
+
+.LoginPage_login-button__uaOVN {
+  margin-left: 30px;
+  background-color: #3498db;
+  color: white;
+}
+
+.LoginPage_registration-button__ExwF7 {
+  margin: 20px;
+  margin-left: 20px;
+  background-color: #2ecc71;
+  color: white;
+}
+
+.LoginPage_login-button__uaOVN:hover,
+.LoginPage_registration-button__ExwF7:hover {
+  background-color: #2980b9;
+}
+
+.LoginPage_app-container-check__89El9 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  text-align: center; 
+}
+
+
+.LoginPage_logout-button__3hio5 {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.LoginPage_logout-button__3hio5:hover {
+  background-color: #c0392b;
+}
+
+.LoginPage_loginFormContainer__p_Pcq {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.LoginPage_loginFormContainer__p_Pcq h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.LoginPage_loginInput__NmCvF {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.LoginPage_passwordContainer__RlG9N {
+  position: relative;
+}
+
+.LoginPage_eyeIcon__3MXAv {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.LoginPage_errorMessage__CCbYB {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.LoginPage_loginButton__mJgLa {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.LoginPage_loginButton__mJgLa:hover {
+  background-color: #2980b9;
+}
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/globals.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+html {
+  height: 100%;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  /* margin: 0;
+  padding: 0; */
+  font-family: sans-serif;
+  background: linear-gradient(#141e30, #243b55);
+}
+
+.content {
+  margin-left: 180px;
+  color: white;
+}
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/components/sideBar.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+/* page.module.css */
+
+.sideBar_sidebar__3l69c {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 120px;
+  background-color: #333;
+  padding: 20px;
+}
+
+.sideBar_sidebar__3l69c ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sideBar_sidebar__3l69c li {
+  margin-bottom: 10px;
+}
+
+.sideBar_sidebar__3l69c a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.sideBar_sidebar__3l69c a:hover {
+  color: #007bff;
+}
+
