@@ -11,6 +11,11 @@ interface Task {
 interface TasksState {
   tasks: Task[]
   currentPage: number
+  filter: {
+    title: string
+    email: string
+    status: 'все' | 'выполнена' | 'не выполнена'
+  }
 }
 
 const initialState: TasksState = {
@@ -38,6 +43,11 @@ const initialState: TasksState = {
     },
   ],
   currentPage: 1,
+  filter: {
+    title: '',
+    email: '',
+    status: 'все',
+  },
 }
 
 const tasksSlice = createSlice({
@@ -63,8 +73,15 @@ const tasksSlice = createSlice({
         state.tasks[index] = action.payload
       }
     },
+    setFilter: (
+      state,
+      action: PayloadAction<Partial<TasksState['filter']>>,
+    ) => {
+      state.filter = { ...state.filter, ...action.payload }
+      state.currentPage = 1
+    },
   },
 })
 
-export const { addTask, setPage, editTask } = tasksSlice.actions
+export const { addTask, setPage, editTask, setFilter } = tasksSlice.actions
 export default tasksSlice.reducer

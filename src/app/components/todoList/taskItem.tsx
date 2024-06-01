@@ -31,36 +31,34 @@ const TaskItem: React.FC<TaskItemProps> = ({ task }) => {
   return (
     <div className={styles['task-item']}>
       {isEditing ? (
-        <>"lint": "npx prettier --write . && eslint --fix . --ext .ts,.tsx",
-          <input
-            className={styles['task-item__input']}
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
+        <>
           <textarea
             className={styles['task-item__textarea']}
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
-          <select
-            className={styles['task-item__select']}
-            value={status}
-            onChange={(e) =>
-              setStatus(e.target.value as 'выполнена' | 'не выполнена')
-            }
-          >
-            <option value="не выполнена">Не выполнена</option>
-            <option value="выполнена">Выполнена</option>
-          </select>
+          <label>
+            Статус:
+            <select
+              value={status}
+              onChange={(e) =>
+                setStatus(e.target.value as 'выполнена' | 'не выполнена')
+              }
+            >
+              <option value="не выполнена">Не выполнена</option>
+              <option value="выполнена">Выполнена</option>
+            </select>
+          </label>
           <button onClick={handleSave}>Сохранить</button>
         </>
       ) : (
         <>
-          <h3>{task.title}</h3>
+          <h3>{task.id}. {task.title}</h3>
+          <p>Email: {task.email}</p>
           <p>{task.description}</p>
           <p>Статус: {task.status}</p>
           {isAdmin && (
-            <button onClick={() => setIsEditing(true)}>Изменить</button>
+            <button onClick={() => setIsEditing(true)}>Редактировать</button>
           )}
         </>
       )}

@@ -24,7 +24,7 @@ export default function Logout() {
         <div className={styles.content}>
           <Link href="/login">
             <button className={styles.loginButton} onClick={handleLogout}>
-              Logout
+              Выйти из профиля
             </button>
           </Link>
         </div>

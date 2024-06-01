@@ -15,6 +15,7 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState<boolean>(false)
   const [error, setError] = useState<string>('')
   const router = useRouter()
+  const vailidEmail = [User.email, Admin.email]
 
   useEffect(() => {
     const user = localStorage.getItem('user')
@@ -23,20 +24,20 @@ export default function LoginPage() {
     }
   }, [])
 
-  const validateEmail = (email: string) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    return re.test(email)
-  }
-
   const handleLogin = () => {
-    if (!validateEmail(email)) {
-      setError('Invalid email address')
+
+    //TODO: вывести в отдельную функцию
+    if (!vailidEmail.includes(email as User | Admin)) {
+      setError('Введите корректный email.')
       return
     }
+
     if (password.length === 0) {
       setError('Password is required')
       return
     }
+
+    //TODO :либо убрать либо рекомпозиционировать
     if (email === User.email && password === User.password) {
       dispatch(setUserAdmin(false))
       localStorage.setItem('user', JSON.stringify({ email: User.email }))

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addTask } from '../../../redux/tasksSlice'
 import styles from './style/taskAdd.module.scss'
+import { Admin, User } from '@/enum/usersData'
 
 const AddTaskForm = () => {
   const dispatch = useDispatch()
@@ -18,12 +19,13 @@ const AddTaskForm = () => {
       setError('Название задачи должно быть от 3 до 25 символов.')
       return
     }
-
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
-    if (!emailPattern.test(email)) {
+    //TODO: вывести в отдельную функцию
+    const vailidEmail = [User.email, Admin.email]
+    if (!vailidEmail.includes(email as User | Admin)) {
       setError('Введите корректный email.')
       return
     }
+
     setError('')
     dispatch(addTask({ title, email, description }))
     setTitle('')

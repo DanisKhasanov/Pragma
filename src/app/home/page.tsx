@@ -20,9 +20,9 @@ export default function Main() {
   return (
     <RootLayout>
       <div className={styles.homePageContainer}>
-        <h1>Список задач</h1>
         <div>
           <AddTaskForm />
+        <h1>Список задач</h1>
           <TaskList />
         </div>
 
