@@ -1,14 +1,30 @@
 /*!****************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/home/homePage.module.css ***!
   \****************************************************************************************************************************************************************************************************************************************************************************/
+.homePage_homePageContainer__i3Tuu {.homePage_homePageContainer__i3Tuu button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-.homePage_homePageContainer__i3Tuu {
+.homePage_homePageContainer__i3Tuu button:hover {
+  background-color: #2980b9;
+}
+
   padding: 20px;
 }
 
 .homePage_homePageContainer__i3Tuu h1 {
   text-align: center;
-  color: #333;
+  color: #f9f9f9;
 }
 
 .homePage_homePageContainer__i3Tuu ul {
@@ -42,12 +58,44 @@
   background-color: #2980b9;
 }
 
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/components/sideBar/sideBar.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+.sideBar_sidebar__fgCww {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 145px;
+  background-color: #333;
+  padding: 20px;
+}
+
+.sideBar_sidebar__fgCww ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sideBar_sidebar__fgCww li {
+  margin-bottom: 25px;
+  font-size: 25px;
+}
+
+.sideBar_sidebar__fgCww a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.sideBar_sidebar__fgCww a:hover {
+  color: #007bff;
+}
+
 /*!*****************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/globals.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************/
 html {
   height: 100%;
-  
+
   justify-content: center;
   align-items: center;
 }
@@ -63,36 +111,84 @@ body {
   margin-left: 180px;
   color: white;
 }
-/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/components/sideBar.module.css ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************/
-/* page.module.css */
 
-.sideBar_sidebar__3l69c {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 120px;
-  background-color: #333;
-  padding: 20px;
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/app/components/todoList/style/taskItem.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.taskItem_task-item__qCynE {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
 }
-
-.sideBar_sidebar__3l69c ul {
-  list-style-type: none;
+.taskItem_task-item__input__xsC2U, .taskItem_task-item__textarea___fSwp, .taskItem_task-item__select__X6IUY {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.taskItem_task-item__button__5CJlN {
+  padding: 5px 10px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.taskItem_task-item__button__5CJlN:hover {
+  background-color: #005bb5;
+}
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/app/components/todoList/style/taskList.module.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.taskList_task-list__items__gdEeY {
+  list-style: none;
   padding: 0;
 }
-
-.sideBar_sidebar__3l69c li {
+.taskList_task-list__pagination__VZHMh {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.taskList_task-list__pagination-button__iXB8V:disabled {
+  background-color: #007bff;
+  cursor: default;
+}
+.taskList_task-list__pagination-button__iXB8V:not(:disabled):hover {
+  background-color: #007bff;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/app/components/todoList/style/taskAdd.module.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.taskAdd_add-task-form__4nnGM {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.taskAdd_add-task-form__input__xRY2V, .taskAdd_add-task-form__textarea__wqopY {
+  display: block;
+  width: 80%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.taskAdd_add-task-form__button__zjkwT {
+  padding: 10px 20px;
+  width: 80%;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.taskAdd_add-task-form__button__zjkwT:hover {
+  background-color: #005bb5;
+}
+.taskAdd_add-task-form__error__7m0FK {
+  color: red;
   margin-bottom: 10px;
 }
-
-.sideBar_sidebar__3l69c a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.sideBar_sidebar__3l69c a:hover {
-  color: #007bff;
-}
-

@@ -1,0 +1,30 @@
+.task-list {
+  &__items {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  &__pagination-button {
+    // margin: 0 5px;
+    // padding: 5px 10px;
+    // border: none;
+    // background-color: #007bff;
+
+    // cursor: pointer;
+
+    &:disabled {
+      background-color: #007bff;
+      cursor: default;
+    }
+
+    &:not(:disabled):hover {
+      background-color: #007bff;
+    }
+  }
+}

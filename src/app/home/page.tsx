@@ -4,10 +4,11 @@ import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import styles from './homePage.module.css'
 import RootLayout from '../layout'
+import TaskList from '../components/todoList/taskList'
+import AddTaskForm from '../components/todoList/taskAdd'
 
 export default function Main() {
   const router = useRouter()
-  const [tasks, setTasks] = useState<string[]>([])
 
   useEffect(() => {
     const user = localStorage.getItem('user')
@@ -19,17 +20,13 @@ export default function Main() {
   return (
     <RootLayout>
       <div className={styles.homePageContainer}>
-        <h1>Task List</h1>
-        <ul>
-          {tasks.map((task, index) => (
-            <li key={index}>{task}</li>
-          ))}
-        </ul>
-        <button
-          onClick={() => setTasks([...tasks, `Task ${tasks.length + 1}`])}
-        >
-          Add Task
-        </button>
+        <h1>Список задач</h1>
+        <div>
+          <AddTaskForm />
+          <TaskList />
+        </div>
+
+        <button onClick={() => router.push('/logout')}>Выйти из профиля</button>
       </div>
     </RootLayout>
   )

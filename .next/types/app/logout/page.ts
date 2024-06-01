@@ -1,4 +1,4 @@
-// File: /Users/julissad/PragmaTestTask/src/app/logout/page.tsx
+// File: /home/dilyara/PragmaTestTask/src/app/logout/page.tsx
 import * as entry from '../../../../src/app/logout/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

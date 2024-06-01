@@ -2,20 +2,20 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import styles from './LoginPage.module.css'
+import styles from './loginPage.module.css'
 import RootLayout from '../layout'
-
-const users = [
-  { email: 'user@user.com', password: '12345' },
-  { email: 'admin@admin.com', password: '67890' },
-]
+import { Admin, User } from '../../enum/usersData'
+import { useDispatch } from 'react-redux'
+import { setUserAdmin } from '@/redux/userSlice'
 
 export default function LoginPage() {
+  const dispatch = useDispatch()
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
   const [showPassword, setShowPassword] = useState<boolean>(false)
   const [error, setError] = useState<string>('')
   const router = useRouter()
+
   useEffect(() => {
     const user = localStorage.getItem('user')
     if (user) {
@@ -37,16 +37,18 @@ export default function LoginPage() {
       setError('Password is required')
       return
     }
-
-    const user = users.find((u) => u.email === email && u.password === password)
-    if (user) {
-      localStorage.setItem('user', JSON.stringify(user))
+    if (email === User.email && password === User.password) {
+      dispatch(setUserAdmin(false))
+      localStorage.setItem('user', JSON.stringify({ email: User.email }))
+      router.push('/home')
+    } else if (email === Admin.email && password === Admin.password) {
+      dispatch(setUserAdmin(true))
+      localStorage.setItem('user', JSON.stringify({ email: Admin.email }))
       router.push('/home')
     } else {
       setError('Неправильный email или пароль')
     }
   }
-
 
   return (
     <RootLayout>
