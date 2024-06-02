@@ -1,23 +1,23 @@
-'use client'
+'use client';
 
-import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
-import Link from 'next/link'
-import styles from './logout.module.css'
-import RootLayout from '../layout'
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import styles from './logout.module.css';
+import RootLayout from '../layout';
 
 export default function Logout() {
+  const router = useRouter();
   useEffect(() => {
-    const user = localStorage.getItem('user')
+    const user = localStorage.getItem('user');
     if (!user) {
-      router.push('/login')
+      router.push('/login');
     }
-  }, [])
-  const router = useRouter()
+  }, [router]);
   const handleLogout = () => {
-    localStorage.removeItem('user')
-    router.push('/')
-  }
+    localStorage.removeItem('user');
+    router.push('/');
+  };
   return (
     <RootLayout>
       <div className={styles.container}>
@@ -30,5 +30,5 @@ export default function Logout() {
         </div>
       </div>
     </RootLayout>
-  )
+  );
 }

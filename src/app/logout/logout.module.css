@@ -1,26 +1,40 @@
-
-
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .content {
-    text-align: center;
-  }
-  
-  .loginButton {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-left: 200px;
+}
+
+.content {
+  text-align: center;
+}
+
+.loginButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
   .loginButton:hover {
     background-color: #0056b3;
   }
-  
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 20px;
+    }
+
+    .content {
+      width: 100%;
+    }
+
+    .loginButton {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}

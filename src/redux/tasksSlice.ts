@@ -1,21 +1,21 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface Task {
-  id: number
-  title: string
-  email: string
-  description?: string
-  status: 'выполнена' | 'не выполнена'
+  id: number;
+  title: string;
+  email: string;
+  description?: string;
+  status: 'выполнена' | 'не выполнена';
 }
 
 interface TasksState {
-  tasks: Task[]
-  currentPage: number
+  tasks: Task[];
+  currentPage: number;
   filter: {
-    title: string
-    email: string
-    status: 'все' | 'выполнена' | 'не выполнена'
-  }
+    title: string;
+    email: string;
+    status: 'все' | 'выполнена' | 'не выполнена';
+  };
 }
 
 const initialState: TasksState = {
@@ -48,7 +48,7 @@ const initialState: TasksState = {
     email: '',
     status: 'все',
   },
-}
+};
 
 const tasksSlice = createSlice({
   name: 'tasks',
@@ -59,29 +59,24 @@ const tasksSlice = createSlice({
         id: state.tasks.length + 1,
         status: 'не выполнена',
         ...action.payload,
-      }
-      state.tasks.unshift(newTask)
+      };
+      state.tasks.unshift(newTask);
     },
     setPage: (state, action: PayloadAction<number>) => {
-      state.currentPage = action.payload
+      state.currentPage = action.payload;
     },
     editTask: (state, action: PayloadAction<Task>) => {
-      const index = state.tasks.findIndex(
-        (task) => task.id === action.payload.id,
-      )
+      const index = state.tasks.findIndex((task) => task.id === action.payload.id);
       if (index !== -1) {
-        state.tasks[index] = action.payload
+        state.tasks[index] = action.payload;
       }
     },
-    setFilter: (
-      state,
-      action: PayloadAction<Partial<TasksState['filter']>>,
-    ) => {
-      state.filter = { ...state.filter, ...action.payload }
-      state.currentPage = 1
+    setFilter: (state, action: PayloadAction<Partial<TasksState['filter']>>) => {
+      state.filter = { ...state.filter, ...action.payload };
+      state.currentPage = 1;
     },
   },
-})
+});
 
-export const { addTask, setPage, editTask, setFilter } = tasksSlice.actions
-export default tasksSlice.reducer
+export const { addTask, setPage, editTask, setFilter } = tasksSlice.actions;
+export default tasksSlice.reducer;

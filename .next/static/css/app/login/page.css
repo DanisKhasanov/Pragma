@@ -1,206 +1,15 @@
 /*!******************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/login/loginPage.module.css ***!
   \******************************************************************************************************************************************************************************************************************************************************************************/
-
-.loginPage_login-form-container__yHxsZ {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  padding: 40px;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
-  box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-}
-.loginPage_login-form-container__yHxsZ h2 {
-  margin: 0 0 30px;
-  padding: 0;
-  color: #fff;
-  text-align: center;
-  overflow: hidden; 
-  border-right: 0.15em solid white; 
-  white-space: nowrap; 
-  margin: 20px auto;
-  letter-spacing: 0.15em; 
-  animation: loginPage_typing__xNoUF 3.5s steps(40, end), loginPage_blink-caret__YyRU6 0.75s step-end infinite; 
-}
-
-@keyframes loginPage_typing__xNoUF {
-  0% {
-    -webkit-clip-path: inset(
-      0 100% 0 0
-    );
-            clip-path: inset(
-      0 100% 0 0
-    ); 
-  }
-  100% {
-    -webkit-clip-path: inset(0);
-            clip-path: inset(0); 
-  }
-}
-
-@keyframes loginPage_blink-caret__YyRU6 {
-  from,
-  to {
-    border-color: transparent;
-  }
-}
-
-.loginPage_login-input__jq7aG {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
-}
-
-
-
-.loginPage_password-toggle-icon__jw1hW {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.loginPage_eye-icon__VhLVG {
-  position: absolute;
-  top: 53%;
-  right: 40px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.loginPage_eye-icon__VhLVG svg {
-  width: 20px;
-  height: 20px;
-  fill: #ccc;
-  transition: fill 0.3s ease;
-}
-
-.loginPage_eye-icon__VhLVG svg:hover {
-  fill: #555;
-}
-
-@keyframes loginPage_eye-blink__5wx5t {
-  0% {
-    transform: scaleY(1);
-  }
-  50% {
-    transform: scaleY(0);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-
-
-.loginPage_password-strength-meter__x4vKs {
-  width: 100%;
-  height: 2px;
-  margin-top: 10px; 
-  background-color: #eee;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.loginPage_password-strength-indicator__vqv6C {
-  height: 100%;
-  background-color: #2ecc71; 
-  transition: width 0.3s ease; 
-}
-
-.loginPage_password-strong__uHEC_ {
-  background-color: #2ecc71; /* Зеленый цвет */
-}
-
-.loginPage_password-medium__3QRuJ {
-  background-color: #f1c40f; 
-}
-
-.loginPage_password-weak__C_hNM {
-  background-color: #e74c3c; 
-}
-.loginPage_button-container__3CdHB {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  text-align: center;
-}
-
-.loginPage_login-button____uSp,
-.loginPage_registration-button__hSI_m {
-  padding: 12px 24px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin: 0 5px; 
-}
-
-.loginPage_login-button____uSp {
-  margin-left: 30px;
-  background-color: #3498db;
-  color: white;
-}
-
-.loginPage_registration-button__hSI_m {
-  margin: 20px;
-  margin-left: 20px;
-  background-color: #2ecc71;
-  color: white;
-}
-
-.loginPage_login-button____uSp:hover,
-.loginPage_registration-button__hSI_m:hover {
-  background-color: #2980b9;
-}
-
-.loginPage_app-container-check__9ZvBw {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-  width: 100%;
-  max-width: 400px;
-  margin: auto;
-  padding: 20px;
-  text-align: center; 
-}
-
-
-.loginPage_logout-button__DzvXr {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.loginPage_logout-button__DzvXr:hover {
-  background-color: #c0392b;
-}
-
 .loginPage_loginFormContainer___LV3B {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
+  background-color: #282c34;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -229,14 +38,6 @@
   position: relative;
 }
 
-.loginPage_eyeIcon__kbotC {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
 .loginPage_errorMessage__x5gky {
   color: red;
   margin-top: 10px;
@@ -259,27 +60,36 @@
   background-color: #2980b9;
 }
 
+@media (max-width: 768px) {
+  .loginPage_loginFormContainer___LV3B {
+    width: 90%;
+  }
+}
+
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/components/sideBar/sideBar.module.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************/
 .sideBar_sidebar__fgCww {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 145px;
+  width: 200px;
   background-color: #333;
+  color: white;
   padding: 20px;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sideBar_sidebar__fgCww ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .sideBar_sidebar__fgCww li {
   margin-bottom: 25px;
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 .sideBar_sidebar__fgCww a {
@@ -288,28 +98,39 @@
 }
 
 .sideBar_sidebar__fgCww a:hover {
-  color: #007bff;
+  color: orange;
 }
 
-/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/globals.css ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************/
-html {
-  height: 100%;
+@media (max-width: 768px) {
+  .sideBar_sidebar__fgCww {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px;
+  }
 
-  justify-content: center;
-  align-items: center;
+  .sideBar_sidebar__fgCww ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sideBar_sidebar__fgCww li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[13].use[5]!./src/app/globals.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
-  /* margin: 0;
-  padding: 0; */
   font-family: sans-serif;
-  background: linear-gradient(#141e30, #243b55);
+  background-color: #282c34;
 }
-
-.content {
-  margin-left: 180px;
-  color: white;
-}
-

@@ -1,22 +1,13 @@
-.homePageContainer {.homePageContainer button {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  font-size: 16px;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.homePageContainer button:hover {
-  background-color: #2980b9;
-}
-
+.homePageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
+  background-color: #282c34;
+  color: white;
+  margin-left: 200px;
+  box-sizing: border-box;
+  min-height: 100vh;
 }
 
 .homePageContainer h1 {
@@ -24,26 +15,13 @@
   color: #f9f9f9;
 }
 
-.homePageContainer ul {
-  list-style: none;
-  padding: 0;
-}
-
-.homePageContainer li {
-  background: #f9f9f9;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
 .homePageContainer button {
   display: block;
-  width: 100%;
-  margin: 10px 0;
+  width: 50%;
+  margin-top: 20px;
   padding: 10px;
   font-size: 16px;
-  background-color: #3498db;
+  background-color: #0c34e7;
   color: white;
   border: none;
   border-radius: 5px;
@@ -53,4 +31,16 @@
 
 .homePageContainer button:hover {
   background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .homePageContainer {
+    margin-left: 0;
+    padding-top: 20px;
+  }
+
+  .homePageContainer button {
+    margin: 10px auto;
+    width: fit-content;
+  }
 }

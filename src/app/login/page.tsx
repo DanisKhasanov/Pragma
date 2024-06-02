@@ -1,55 +1,54 @@
-'use client'
+'use client';
 
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/navigation'
-import styles from './loginPage.module.css'
-import RootLayout from '../layout'
-import { Admin, User } from '../../enum/usersData'
-import { useDispatch } from 'react-redux'
-import { setUserAdmin } from '@/redux/userSlice'
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import styles from './loginPage.module.css';
+import RootLayout from '../layout';
+import { Admin, User } from '../../enum/usersData';
+import { useDispatch } from 'react-redux';
+import { setUserAdmin } from '@/redux/userSlice';
 
 export default function LoginPage() {
-  const dispatch = useDispatch()
-  const [email, setEmail] = useState<string>('')
-  const [password, setPassword] = useState<string>('')
-  const [showPassword, setShowPassword] = useState<boolean>(false)
-  const [error, setError] = useState<string>('')
-  const router = useRouter()
-  const vailidEmail = [User.email, Admin.email]
+  const dispatch = useDispatch();
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [showPassword, setShowPassword] = useState<boolean>(false);
+  const [error, setError] = useState<string>('');
+  const router = useRouter();
+  const vailidEmail = [User.email, Admin.email];
 
   useEffect(() => {
-    const user = localStorage.getItem('user')
+    const user = localStorage.getItem('user');
     if (user) {
-      router.push('/home')
+      router.push('/home');
     }
-  }, [])
+  }, [router]);
 
   const handleLogin = () => {
-
     //TODO: вывести в отдельную функцию
     if (!vailidEmail.includes(email as User | Admin)) {
-      setError('Введите корректный email.')
-      return
+      setError('Введите корректный email.');
+      return;
     }
 
     if (password.length === 0) {
-      setError('Password is required')
-      return
+      setError('Password is required');
+      return;
     }
 
     //TODO :либо убрать либо рекомпозиционировать
     if (email === User.email && password === User.password) {
-      dispatch(setUserAdmin(false))
-      localStorage.setItem('user', JSON.stringify({ email: User.email }))
-      router.push('/home')
+      dispatch(setUserAdmin(false));
+      localStorage.setItem('user', JSON.stringify({ email: User.email }));
+      router.push('/home');
     } else if (email === Admin.email && password === Admin.password) {
-      dispatch(setUserAdmin(true))
-      localStorage.setItem('user', JSON.stringify({ email: Admin.email }))
-      router.push('/home')
+      dispatch(setUserAdmin(true));
+      localStorage.setItem('user', JSON.stringify({ email: Admin.email }));
+      router.push('/home');
     } else {
-      setError('Неправильный email или пароль')
+      setError('Неправильный email или пароль');
     }
-  }
+  };
 
   return (
     <RootLayout>
@@ -77,5 +76,5 @@ export default function LoginPage() {
         </button>
       </div>
     </RootLayout>
-  )
+  );
 }

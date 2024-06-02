@@ -1,12 +1,13 @@
-'use client'
-import Link from 'next/link';
-import styles from './page.module.css';
+'use client';
+import styles from './page.module.scss';
 import RootLayout from './layout';
 
 export default function Home() {
   return (
-  <RootLayout >
-    <div className={styles.container}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae soluta numquam iure, maxime consequatur fugit nam minus suscipit exercitationem totam tempore praesentium hic id temporibus sapiente corporis eligendi molestias iusto.</div>
+    <RootLayout>
+      <div className={styles['container']}>
+        <p className={styles['text']}>Добро пожаловать в текстовый проект</p>
+      </div>
     </RootLayout>
   );
 }

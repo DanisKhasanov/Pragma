@@ -1,37 +1,37 @@
-'use client'
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { addTask } from '../../../redux/tasksSlice'
-import styles from './style/taskAdd.module.scss'
-import { Admin, User } from '@/enum/usersData'
+'use client';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addTask } from '../../../redux/tasksSlice';
+import styles from './style/taskAdd.module.scss';
+import { Admin, User } from '@/enum/usersData';
 
 const AddTaskForm = () => {
-  const dispatch = useDispatch()
-  const [title, setTitle] = useState('')
-  const [email, setEmail] = useState('')
-  const [description, setDescription] = useState('')
-  const [error, setError] = useState('')
+  const dispatch = useDispatch();
+  const [title, setTitle] = useState('');
+  const [email, setEmail] = useState('');
+  const [description, setDescription] = useState('');
+  const [error, setError] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (title.length < 3 || title.length > 25) {
-      setError('Название задачи должно быть от 3 до 25 символов.')
-      return
+      setError('Название задачи должно быть от 3 до 25 символов.');
+      return;
     }
     //TODO: вывести в отдельную функцию
-    const vailidEmail = [User.email, Admin.email]
+    const vailidEmail = [User.email, Admin.email];
     if (!vailidEmail.includes(email as User | Admin)) {
-      setError('Введите корректный email.')
-      return
+      setError('Введите корректный email.');
+      return;
     }
 
-    setError('')
-    dispatch(addTask({ title, email, description }))
-    setTitle('')
-    setEmail('')
-    setDescription('')
-  }
+    setError('');
+    dispatch(addTask({ title, email, description }));
+    setTitle('');
+    setEmail('');
+    setDescription('');
+  };
 
   return (
     <form className={styles['add-task-form']} onSubmit={handleSubmit}>
@@ -60,7 +60,7 @@ const AddTaskForm = () => {
         Добавить задачу
       </button>
     </form>
-  )
-}
+  );
+};
 
-export default AddTaskForm
+export default AddTaskForm;

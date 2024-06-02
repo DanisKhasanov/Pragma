@@ -1,7 +1,6 @@
-import Link from 'next/link'
-import styles from './sideBar.module.css'
-import { FaHome, FaSignInAlt, FaSignOutAlt } from 'react-icons/fa'
-
+import Link from 'next/link';
+import styles from './sideBar.module.css';
+import { FaHome, FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
 const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
@@ -25,7 +24,7 @@ const Sidebar = () => {
         </ul>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

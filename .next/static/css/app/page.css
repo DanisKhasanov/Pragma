@@ -1,34 +1,73 @@
-/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/page.module.css ***!
-  \*******************************************************************************************************************************************************************************************************************************************************************/
-/* .container {
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[9].use[5]!./src/app/page.module.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_container__LLik5 {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 170vw;
-} */
+  padding-left: 200px;
+  color: white;
+  background-color: #282c34;
+  box-sizing: border-box;
+}
+
+.page_text__HsUaO {
+  font-size: 2rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  width: 33ch;
+  animation: page_typing__ZpN0b 4s steps(32), page_blink-caret__Znuym 0.75s step-end infinite;
+}
+
+@keyframes page_typing__ZpN0b {
+  from {
+    width: 0;
+  }
+  to {
+    width: 33ch;
+  }
+}
+@keyframes page_blink-caret__Znuym {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+@media (max-width: 768px) {
+  .page_container__LLik5 {
+    padding-left: 0;
+    padding-top: 50px;
+  }
+}
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/components/sideBar/sideBar.module.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************/
 .sideBar_sidebar__fgCww {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 145px;
+  width: 200px;
   background-color: #333;
+  color: white;
   padding: 20px;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .sideBar_sidebar__fgCww ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .sideBar_sidebar__fgCww li {
   margin-bottom: 25px;
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 .sideBar_sidebar__fgCww a {
@@ -37,28 +76,39 @@
 }
 
 .sideBar_sidebar__fgCww a:hover {
-  color: #007bff;
+  color: orange;
 }
 
-/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/globals.css ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************/
-html {
-  height: 100%;
+@media (max-width: 768px) {
+  .sideBar_sidebar__fgCww {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 10px;
+  }
 
-  justify-content: center;
-  align-items: center;
+  .sideBar_sidebar__fgCww ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sideBar_sidebar__fgCww li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[13].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[13].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[13].oneOf[13].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[13].oneOf[13].use[5]!./src/app/globals.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
-  /* margin: 0;
-  padding: 0; */
   font-family: sans-serif;
-  background: linear-gradient(#141e30, #243b55);
+  background-color: #282c34;
 }
-
-.content {
-  margin-left: 180px;
-  color: white;
-}
-

@@ -1,16 +1,15 @@
-import ClientWrapper from './components/clientWrapper'
-import './globals.css'
+import ClientWrapper from './components/clientWrapper/clientWrapper';
+import './globals.scss';
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body>
         <ClientWrapper>{children}</ClientWrapper>
-          {/* <div className="content">{children}</div> */}
       </body>
     </html>
-  )
+  );
 }
